@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "subcent-si"
+version = "0.1.0"
+description = "Programmable spend guardrails and semantic audit logging for autonomous AI agents."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["ai", "agent", "guardrails", "payments", "audit", "security", "x402", "stripe"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.scripts]
+subcent = "subcent.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["subcent"]
